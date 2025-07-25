@@ -3,13 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chernet Getaneh Tebabal - Portfolio</title>
+  <title>Chernet Getaneh Tebabal | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
+  <!-- Header with background image -->
+  <header class="top-header">
     <h1>Chernet Getaneh Tebabal</h1>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <h1>Chernet</h1>
+    <div class="profile-pic">
+      <img src="assets/images/my_pic.jpg" alt="Chernet Profile Picture" />
+    </div>
     <nav>
       <ul>
         <li><a href="#about">About</a></li>
@@ -20,58 +29,65 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-  </header>
+  </aside>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a passionate tech lover. I have a background in Civil Engineering. I would like to explore the interdisciplinary connection of software development and civil engineering to solve practical problems in my career.</p>
-  </section>
+  <!-- Main Content -->
+  <main class="content">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am a passionate tech lover. I have a background in Civil Engineering. I would like to explore the interdisciplinary connection of software development and civil engineering to solve practical problems in my career.</p>
+    </section>
 
-  <section id="skills">
-    <h2>Programming Languages</h2>
-    <ul>
-      <li>HTML (Beginner)</li>
-      <li>CSS (Beginner)</li>
-      <li>JavaScript (Beginner)</li>
-      <li>Python (Beginner)</li>
-    </ul>
-  </section>
+    <section id="skills">
+      <h2>Programming Languages</h2>
+      <ul>
+        <li>HTML (Beginner)</li>
+        <li>CSS (Beginner)</li>
+        <li>JavaScript (Beginner)</li>
+        <li>Python (Beginner)</li>
+      </ul>
+    </section>
 
-  <section id="education">
-    <h2>Educational Background</h2>
-    <p><strong>MSc in Civil Engineering (Construction Technology and Management)</strong><br>
-       Addis Ababa Science and Technology University, 2019</p>
-    <p><strong>BSc in Civil Engineering (Structural Engineering)</strong><br>
-       Adama Science and Technology University, 2013</p>
-    <a href="assets/cv.pdf" download>Download My CV</a>
-  </section>
+    <section id="education">
+      <h2>Education</h2>
+      <p><strong>MSc in Civil Engineering (Construction Technology and Management)</strong><br/>
+      Addis Ababa Science and Technology University, 2019</p>
 
-  <section id="interests">
-    <h2>Interests</h2>
-    <ul>
-      <li>Machine Learning</li>
-      <li>Artificial Intelligence in Software Engineering</li>
-    </ul>
-  </section>
+      <p><strong>BSc in Civil Engineering (Structural Engineering)</strong><br/>
+      Adama Science and Technology University, 2013</p>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>No software projects added yet. Stay tuned!</p>
-  </section>
+      <p><a href="assets/cv.pdf" download>📄 Download My CV</a></p>
+    </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/mbjnkevg" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+    <section id="interests">
+      <h2>Interests</h2>
+      <ul>
+        <li>Machine Learning</li>
+        <li>Artificial Intelligence in Software Engineering</li>
+      </ul>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Chernet Getaneh Tebabal. All rights reserved.</p>
-  </footer>
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>No software projects yet.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/xwkdyyjl" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="_replyto" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
 
 </body>
 </html>
