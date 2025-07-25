@@ -1,0 +1,120 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f6f8;
+  color: #333;
+  padding-bottom: 40px;
+}
+
+/* Header */
+header {
+  background-color: #1e2d3d;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  border-bottom: 4px solid #4caf50; /* Structural + Tech colors */
+}
+
+header h1 {
+  font-size: 2.2rem;
+}
+
+nav ul {
+  list-style: none;
+  margin-top: 15px;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 12px;
+}
+
+nav ul li a {
+  color: #ddd;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #4caf50;
+}
+
+/* Sections */
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+section h2 {
+  color: #1e2d3d;
+  margin-bottom: 20px;
+  border-left: 6px solid #4caf50;
+  padding-left: 10px;
+  font-size: 1.6rem;
+}
+
+/* Lists */
+ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* Links */
+a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Form */
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form button {
+  padding: 12px 24px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #3e8e41;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1e2d3d;
+  color: white;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
