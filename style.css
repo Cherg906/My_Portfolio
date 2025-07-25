@@ -1,3 +1,4 @@
+/* Global styles */
 * {
   margin: 0;
   padding: 0;
@@ -6,132 +7,177 @@
 
 body {
   font-family: Arial, sans-serif;
-  display: flex;
-  min-height: 100vh;
-  background-color: #f0f0f0;
+  line-height: 1.6;
+  color: #222;
+  background-color: #fff;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Top Header with background image */
-.top-header {
+/* Dark mode styles */
+body.dark {
+  background-color: #121212;
+  color: #ddd;
+}
+
+.container {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #2c3e50;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: fixed;
   top: 0;
-  left: 200px;
-  right: 0;
-  height: 200px;
-  background-image: url("assets/images/Background.jpg");
-  background-size: cover;
-  background-position: center;
+  left: 0;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.sidebar .profile-pic {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 2px solid #fff;
+}
+
+.sidebar ul {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+  color: #1abc9c;
+}
+
+#darkToggle {
+  margin-top: auto;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+/* Main content */
+.content {
+  flex: 1;
+  padding: 40px;
+  margin-left: 220px;
+}
+
+/* Hero section with background */
+.hero {
+  background: url('Assets/images/Background.jpg') no-repeat center center/cover;
+  height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-  z-index: 10;
-  border-bottom: 4px solid #4caf50;
-}
-
-.top-header h1 {
-  font-size: 2.5rem;
-}
-
-/* Sidebar Navigation */
-.sidebar {
-  width: 200px;
-  background-color: #222;
-  color: white;
-  padding: 20px;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  overflow-y: auto;
-}
-
-.sidebar h1 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.profile-pic {
-  text-align: center;
+  text-shadow: 1px 1px 3px black;
+  border-radius: 10px;
   margin-bottom: 30px;
 }
 
-.profile-pic img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #4caf50;
+h1 {
+  font-size: 2.5em;
 }
 
-.sidebar nav ul {
-  list-style: none;
-  padding: 0;
+/* Section styling */
+section {
+  margin-bottom: 40px;
+  scroll-margin-top: 80px;
 }
 
-.sidebar nav ul li {
-  margin: 15px 0;
+h2 {
+  margin-bottom: 10px;
+  color: #1abc9c;
 }
 
-.sidebar nav ul li a {
-  color: white;
+/* Button */
+.btn, button {
+  display: inline-block;
+  background: #1abc9c;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease;
 }
 
-.sidebar nav ul li a:hover {
-  color: #4caf50;
+.btn:hover, button:hover {
+  background: #148f77;
 }
 
-/* Main Content */
-.content {
-  margin-left: 200px;
-  padding: 240px 40px 40px;
-  flex: 1;
-}
-
-.content section {
-  margin-bottom: 60px;
-}
-
-.content h2 {
-  color: #4caf50;
-  margin-bottom: 10px;
-}
-
-.content ul {
-  margin-left: 20px;
-}
-
+/* Contact form */
 form {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-form input,
-form textarea {
+input, textarea {
   padding: 10px;
-  border-radius: 4px;
+  border-radius: 5px;
   border: 1px solid #ccc;
+  font-size: 1em;
 }
 
-form button {
-  padding: 10px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
 
-form button:hover {
-  background-color: #45a049;
-}
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+  }
 
-a {
-  color: #4caf50;
-  text-decoration: none;
+  .sidebar ul {
+    display: flex;
+    gap: 15px;
+  }
+
+  .sidebar .profile-pic {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .hero {
+    height: 180px;
+    font-size: 1.5em;
+  }
 }

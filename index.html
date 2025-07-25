@@ -3,91 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chernet Getaneh Tebabal | Portfolio</title>
+  <title>Chernet Getaneh Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Header with background image -->
-  <header class="top-header">
-    <h1>Chernet Getaneh Tebabal</h1>
-  </header>
-
-  <!-- Sidebar Navigation -->
-  <aside class="sidebar">
-    <h1>Chernet</h1>
-    <div class="profile-pic">
-      <img src="assets/images/my_pic.jpg" alt="Chernet Profile Picture" />
-    </div>
-    <nav>
+  <div class="container">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <img src="Assets/images/my_pic.jpg" alt="Profile Photo" class="profile-pic" />
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#interests">Interests</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#publication">Publication</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <button id="darkToggle">🌙</button>
     </nav>
-  </aside>
 
-  <!-- Main Content -->
-  <main class="content">
-    <section id="about">
-      <h2>About Me</h2>
-      <p>I am a passionate tech lover. I have a background in Civil Engineering. I would like to explore the interdisciplinary connection of software development and civil engineering to solve practical problems in my career.</p>
-    </section>
+    <!-- Main Content -->
+    <main class="content">
+      <!-- Hero Section -->
+      <section class="hero">
+        <h1>Chernet Getaneh Tebabal</h1>
+      </section>
 
-    <section id="skills">
-      <h2>Programming Languages</h2>
-      <ul>
-        <li>HTML (Beginner)</li>
-        <li>CSS (Beginner)</li>
-        <li>JavaScript (Beginner)</li>
-        <li>Python (Beginner)</li>
-      </ul>
-    </section>
+      <!-- About -->
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          I am a passionate tech lover. I have a background in Civil Engineering.
+          I would like to explore the interdisciplinary connection of software
+          development and civil engineering to solve practical problems in my career.
+        </p>
+      </section>
 
-    <section id="education">
-      <h2>Education</h2>
-      <p><strong>MSc in Civil Engineering (Construction Technology and Management)</strong><br/>
-      Addis Ababa Science and Technology University, 2019</p>
+      <!-- Skills -->
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML (Beginner)</li>
+          <li>CSS (Beginner)</li>
+          <li>JavaScript (Beginner)</li>
+          <li>Python (Beginner)</li>
+        </ul>
+      </section>
 
-      <p><strong>BSc in Civil Engineering (Structural Engineering)</strong><br/>
-      Adama Science and Technology University, 2013</p>
+      <!-- Education -->
+      <section id="education">
+        <h2>Education</h2>
+        <ul>
+          <li>MSc in Civil Engineering (Construction Technology and Management) - Addis Ababa Science and Technology University, 2019</li>
+          <li>BSc in Civil Engineering (Structural) - Adama Science and Technology University, 2013</li>
+        </ul>
+        <p>
+          <a href="Assets/cv.pdf" target="_blank">Download CV (PDF)</a>
+        </p>
+      </section>
 
-      <p><a href="assets/cv.pdf" download>📄 Download My CV</a></p>
-    </section>
+      <!-- Interests -->
+      <section id="interests">
+        <h2>Interests</h2>
+        <p>Machine Learning, Artificial Intelligence in Software Engineering</p>
+      </section>
 
-    <section id="interests">
-      <h2>Interests</h2>
-      <ul>
-        <li>Machine Learning</li>
-        <li>Artificial Intelligence in Software Engineering</li>
-      </ul>
-    </section>
+      <!-- Projects -->
+      <section id="projects">
+        <h2>Projects</h2>
+        <p>No software projects yet.</p>
+      </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <p>No software projects yet.</p>
-    </section>
+      <!-- Publication -->
+      <section id="publication">
+        <h2>Publication</h2>
+        <p>
+          <a href="https://www.globalscientificjournal.com/researchpaper/Effect_of_Gypsum_as_a_Partial_Replacement_of_Cement_on_Fresh_and_Hardened_Properties_of_Self_Compacting_Concrete.pdf" target="_blank">
+            Effect of Gypsum as a Partial Replacement of Cement on Fresh and Hardened Properties of Self Compacting Concrete (PDF)
+          </a>
+        </p>
+      </section>
 
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <form action="https://formspree.io/f/xwkdyyjl" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
+      <!-- Contact -->
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/f/xeqyldqe" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="_replyto" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+        <p style="margin-top: 10px;">
+          LinkedIn Profile:
+          <a href="https://www.linkedin.com/in/chernet-getaneh-msc-pmp%C2%AE-a634a07b/" target="_blank">
+            https://www.linkedin.com/in/chernet-getaneh
+          </a>
+        </p>
+      </section>
+    </main>
+  </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="_replyto" required />
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </main>
-
+  <script>
+    // Dark mode toggle
+    const toggle = document.getElementById('darkToggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
 </body>
 </html>
