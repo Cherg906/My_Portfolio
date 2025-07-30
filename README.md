@@ -1,52 +1,53 @@
-# 💼 Chernet Getaneh Tebabal - Portfolio Website
 
-This is a clean, professional, and fully responsive personal portfolio website for **Chernet Getaneh Tebabal**. It is designed to showcase skills, education, projects, interests, and professional background in both Civil Engineering and Software Development.
+# Chernet Getaneh Tebabal - Portfolio
 
-## 🌐 Live Preview
-To preview the website, simply open `index.html` in a browser or deploy it using GitHub Pages or any static hosting provider.
+This is a personal portfolio website for **Chernet Getaneh Tebabal**, designed with HTML and CSS, featuring a responsive layout and dark mode toggle without JavaScript.
 
----
+## Features
 
-## 📁 Folder Structure
-
-```
-Portfolio/
-├── index.html
-├── style.css
-├── Assets/
-│   ├── cv.pdf
-│   └── images/
-│       ├── Background.jpg
-│       ├── LinkedInLogo.png
-│       └── my_pic.jpg
-```
-
----
-
-## 🔍 Features
-
-- Responsive layout with mobile support
+- Clean and responsive layout with mobile support
 - Sidebar navigation
 - Scroll-based section highlights
-- Dark/light mode toggle with icon
 - Profile and background images
 - Smooth scroll animations
 - Clean modern UI
+- Dark mode toggle (using checkbox only)
+- Sections:
+       - **About Me**: A brief introduction and personal goal
+       - **Skills**: Programming languages and proficiency
+       - **Education**: Academic background with degrees and universities
+       - **Interests**: Listed with bullet points
+       - **Projects**: Placeholder for future projects
+       - **Publications**: Includes academic research link
+       - **Contact Me**: Message form and LinkedIn contact
 - Downloadable CV
-- Working contact form (configurable with EmailJS or Formspree)
-- Link to LinkedIn profile with custom logo
+- LinkedIn Profile Link with custom image logo
+- Background image behind the title
 
----
+## File Structure
 
-## 📄 Sections Included
+```
+Assets/
+├── images/
+│   ├── my_pic.jpg
+│   └── LinkedInLogo.png
+│   └── background.jpg
+├── cv.pdf
+index.html
+style.css
+README.md
 
-- **About Me**: A brief introduction and personal goal
-- **Skills**: Programming languages and proficiency
-- **Education**: Academic background with degrees and universities
-- **Interests**: Listed with bullet points
-- **Projects**: Placeholder for future projects
-- **Publications**: Includes academic research link
-- **Contact Me**: Message form and LinkedIn contact
+```
+
+## How to Use
+
+1. Clone the repository or download the files.
+2. Ensure the `Assets` folder includes:
+   - Your profile picture as `my_pic.jpg`
+   - Your LinkedIn logo as `LinkedInLogo.png`
+   - A background image named `background.jpg`
+   - Your resume as `cv.pdf`
+3. Open `index.html` in your browser to view the portfolio.
 
 ---
 
@@ -54,17 +55,8 @@ Portfolio/
 
 - HTML5
 - CSS3
-- JavaScript (for interactivity)
 - Font Awesome icons
 - Custom image assets
-
----
-
-## 🛠️ Setup Instructions
-
-1. Clone or download this repository.
-2. Place the `Portfolio` folder anywhere on your machine.
-3. Open `index.html` with your web browser to view the portfolio.
 
 ---
 
@@ -89,5 +81,12 @@ You can easily edit:
 For more information or inquiries, please fill the form in the **Contact Me** section of the site.
 
 ---
+## Deployment
+
+You can deploy this portfolio on platforms like GitHub Pages, Netlify, or Vercel.
+
+## License
+
+This portfolio is open for personal use and customization.
 
 > Developed with ❤️ by Chernet Getaneh Tebabal

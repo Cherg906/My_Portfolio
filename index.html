@@ -5,100 +5,229 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chernet Getaneh Tebabal - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer>
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #000;
+      transition: background-color 0.3s, color 0.3s;
     }
-  </script>
+
+    .container {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    .content-wrapper {
+      display: flex;
+      flex-grow: 1;
+    }
+
+    .sidebar {
+      width: 250px;
+      background: #f4f4f4;
+      padding: 20px;
+      text-align: left;
+      color: #111;
+      transition: color 0.3s, background-color 0.3s;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .sidebar a {
+      color: #111 !important;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      transition: color 0.3s;
+    }
+
+    #dark-toggle:checked ~ .container .sidebar {
+      background: #222;
+      color: #eee;
+    }
+
+    #dark-toggle:checked ~ .container .sidebar a {
+      color: #eee !important;
+    }
+
+    .dark-toggle-label {
+      display: inline-block;
+      margin-top: 20px;
+      cursor: pointer;
+      color: #111;
+      user-select: none;
+      transition: color 0.3s;
+    }
+
+    #dark-toggle:checked ~ .container .dark-toggle-label {
+      color: #eee;
+    }
+
+    .main-content {
+      flex-grow: 1;
+      padding: 20px 30px;
+    }
+
+    #dark-toggle {
+      display: none;
+    }
+
+    #dark-toggle:checked ~ .container {
+      background-color: #111;
+      color: #eee;
+    }
+
+    #dark-toggle:checked ~ .container a {
+      color: #80d0ff;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .linkedin-logo {
+      width: 20px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+
+    footer {
+      background-color: #f4f4f4;
+      color: #222;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 0.9rem;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    #dark-toggle:checked ~ .container footer {
+      background-color: #222;
+      color: #eee;
+    }
+
+    .profile-pic {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
+  <input type="checkbox" id="dark-toggle" />
+
   <div class="container">
-    <aside class="sidebar">
-      <img src="Assets/images/my_pic.jpg" alt="Chernet Profile" class="profile-pic" />
-      <nav>
-        <ul>
-          <li><a href="#about">👤 About Me</a></li>
-          <li><a href="#skills">🛠️ Skills</a></li>
-          <li><a href="#education">🎓 Education</a></li>
-          <li><a href="#interests">💡 Interests</a></li>
-          <li><a href="#projects">📁 Projects</a></li>
-          <li><a href="#publication">📚 Publication</a></li>
-          <li><a href="#contact">✉️ Contact Me</a></li>
-        </ul>
-      </nav>
-      <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌓</button>
-    </aside>
+    <div class="content-wrapper">
+      <aside class="sidebar">
+        <img src="Assets/images/my_pic.jpg" alt="Chernet Profile" class="profile-pic" />
+        <nav>
+          <ul>
+            <li><a href="#about">👤 About Me</a></li>
+            <li><a href="#skills">🛠️ Skills</a></li>
+            <li><a href="#education">🎓 Education</a></li>
+            <li><a href="#interests">💡 Interests</a></li>
+            <li><a href="#projects">📁 Projects</a></li>
+            <li><a href="#publication">📚 Publication</a></li>
+            <li><a href="#contact">✉️ Contact Me</a></li>
+          </ul>
+        </nav>
+        <label for="dark-toggle" class="dark-toggle-label">🌓 Toggle Dark Mode</label>
+      </aside>
 
-    <main class="main-content">
-      <!-- Hero Section with Background -->
-      <section class="hero-section">
-        <h1>Chernet Getaneh Tebabal</h1>
-      </section>
+      <main class="main-content">
+        <section class="hero-section">
+          <h1>Chernet Getaneh Tebabal</h1>
+        </section>
 
-      <!-- About Me -->
-      <section id="about">
-        <h2>About Me</h2>
-        <p>
-          I am a passionate tech lover with a background in Civil Engineering.
-          I aim to bridge software development and civil engineering to solve real-world problems.
-        </p>
-      </section>
+        <section id="about">
+          <h2>About Me</h2>
+          <p>
+            I am a passionate tech lover with a background in Civil Engineering.
+            I aim to bridge software development and civil engineering to solve real-world problems.
+          </p>
+        </section>
 
-      <!-- Skills -->
-      <section id="skills">
-        <h2>Programming Languages</h2>
-        <p>Beginner in: HTML, CSS, JavaScript, Python</p>
-      </section>
+        <section id="skills">
+          <h2>Programming Languages</h2>
+          <p>Beginner in:</p>
+          <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+          </ul>
+        </section>
 
-      <!-- Education -->
-      <section id="education">
-        <h2>Education</h2>
-        <ul>
-          <li><strong>MSc</strong> in Construction Technology and Management - Addis Ababa Science and Technology University (2019)</li>
-          <li><strong>BSc</strong> in Civil Engineering (Structural) - Adama Science and Technology University (2013)</li>
-        </ul>
-        <a href="Assets/cv.pdf" download class="btn">📄 Download CV</a>
-      </section>
+        <section id="education">
+          <h2>Education</h2>
+          <ul style="list-style-type: disc; padding-left: 20px;">
+            <li><strong>MSc</strong> in Construction Technology and Management - Addis Ababa Science and Technology University (2019)</li>
+            <li><strong>BSc</strong> in Civil Engineering (Structural) - Adama Science and Technology University (2013)</li>
+          </ul>
+          <a href="Assets/cv.pdf" download class="btn">📄 Download CV</a>
+        </section>
 
-      <!-- Interests -->
-      <section id="interests">
-        <h2>Interests</h2>
-        <ul>
-          <li>Machine Learning</li>
-          <li>Artificial Intelligence in Software Engineering</li>
-        </ul>
-      </section>
+        <section id="interests">
+          <h2>Interests</h2>
+          <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Machine Learning</li>
+            <li>Artificial Intelligence in Software Engineering</li>
+          </ul>
+        </section>
 
-      <!-- Projects -->
-      <section id="projects">
-        <h2>Projects</h2>
-        <p>No software projects yet.</p>
-      </section>
+        <section id="projects">
+          <h2>Projects</h2>
+          <p>No software projects yet.</p>
+        </section>
 
-      <!-- Publication -->
-      <section id="publication">
-        <h2>Publication</h2>
-        <a href="https://www.globalscientificjournal.com/researchpaper/Effect_of_Gypsum_as_a_Partial_Replacement_of_Cement_on_Fresh_and_Hardened_Properties_of_Self_Compacting_Concrete.pdf" target="_blank">
-          🧾 Effect of Gypsum as Partial Replacement of Cement on SCC
-        </a>
-      </section>
+        <section id="publication">
+          <h2>Publication</h2>
+          <a href="https://www.globalscientificjournal.com/researchpaper/Effect_of_Gypsum_as_a_Partial_Replacement_of_Cement_on_Fresh_and_Hardened_Properties_of_Self_Compacting_Concrete.pdf" target="_blank">
+            🧾 Effect of Gypsum as Partial Replacement of Cement on SCC
+          </a>
+        </section>
 
-      <!-- Contact -->
-      <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="https://formspree.io/f/mnqepzgj" method="POST">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-        <div class="linkedin-link">
-          <img src="Assets/images/LinkedInLogo.png" alt="LinkedIn Logo" class="linkedin-logo" />
-          <span>LinkedIn Address: </span>
-          <a href="https://www.linkedin.com/in/chernet-getaneh-msc-pmp%C2%AE-a634a07b/" target="_blank">View Profile</a>
-        </div>
-      </section>
-    </main>
+        <section id="contact">
+          <h2>Contact Me</h2>
+          <form action="https://formspree.io/f/mnqepzgj" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+          <div class="linkedin-link" style="margin-top: 10px;">
+            <img src="Assets/images/LinkedInLogo.png" alt="LinkedIn Logo" class="linkedin-logo" />
+            <span>LinkedIn Address: </span>
+            <a href="https://www.linkedin.com/in/chernet-getaneh-msc-pmp%C2%AE-a634a07b/" target="_blank">View Profile</a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      &copy; 2025 Chernet Getaneh
+    </footer>
   </div>
 </body>
 </html>
